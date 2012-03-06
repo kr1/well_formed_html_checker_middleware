@@ -1,7 +1,4 @@
-require 'timeout'
 require 'well_formed_html/log'
-require 'well_formed_html/railtie' if defined?(Rails)
-
 
 module WellFormedHtml
   class Middleware
@@ -17,9 +14,13 @@ module WellFormedHtml
         response  = @app.call env
         body = response[2]
         doc = Nokogiri::XML(body)
-        doc.errors.each{|error|
-          @logger.error(error.message)
-        }
+        unless doc.errors.empty?
+          doc.errors.each{|error|
+            @@logger.error("#{env['REQUEST_URI']} : #{error.message}")
+          }
+        else
+          @@logger.error("#{env['REQUEST_URI']} - no errors")
+        end
       end
       return response
     end
