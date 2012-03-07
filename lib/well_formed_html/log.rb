@@ -4,11 +4,11 @@ module WellFormedHtml
   class Log
 
     Levels = {
-        :fatal => Logger::FATAL, 
-        :error => Logger::ERROR, 
-        :warn  => Logger::WARN, 
-        :info  => Logger::INFO, 
-        :debug => Logger::DEBUG 
+        :fatal => Logger::FATAL,
+        :error => Logger::ERROR,
+        :warn  => Logger::WARN,
+        :info  => Logger::INFO,
+        :debug => Logger::DEBUG
     }
 
     attr_reader :path
@@ -27,7 +27,7 @@ module WellFormedHtml
       else
         Pathname.new('wellformed_html_checker_middleware.log')
       end
-    end 
+    end
 
     def open
       @logger = Logger.new(path.to_s)
@@ -52,7 +52,7 @@ module WellFormedHtml
     end
 
     def level=(level)
-      level = level.to_sym 
+      level = level.to_sym
       raise "Invalid log level" unless Levels.keys.include?(level)
       @logger.level = Levels[level]
     end

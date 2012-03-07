@@ -15,7 +15,7 @@ begin
                           'to print errors and warnings in order to repair the tamplates that  ' \
                           'produce the html response. Therefore it is on by default only in development.'
     gemspec.authors = ['Christian Woerner']
-    gemspec.homepage = 'http://github.com/kr1/well_formed_html_middleware'
+    gemspec.homepage = 'http://github.com/kr1/well_formed_html_checker_middleware'
     gemspec.email = 'krist_bombay@hotmail.com'
     gemspec.add_dependency('nokogiri')
   end
