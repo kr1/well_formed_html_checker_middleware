@@ -13,8 +13,7 @@ module WellFormedHtml
       if Rails.env.development? &&
           response[2].is_a?(ActionDispatch::Response) &&
           response[2].content_type == 'text/html'
-        body = response[2].body
-        doc = Nokogiri::HTML(body){|config|
+        doc = Nokogiri::HTML(response[2].body){|config|
           config.options = Nokogiri::XML::ParseOptions::PEDANTIC
         }
         unless doc.errors.empty?

@@ -12,8 +12,9 @@ begin
     gemspec.description = 'this rails3 middleware uses nokogiri to parse the body of' \
                           'the apps html response and checks if it is well-formed ' \
                           'it can be configured to repair errors, but the default behaviour is ' \
-                          'to print errors and warnings in order to repair the tamplates that  ' \
-                          'produce the html response. Therefore it is on by default only in development.'
+                          'to print errors and warnings in order to repair the templates that  ' \
+                          'produce the html response. Therefore it parses the response by default ' \
+                          'only in development.'
     gemspec.authors = ['Christian Woerner']
     gemspec.homepage = 'http://github.com/kr1/well_formed_html_checker_middleware'
     gemspec.email = 'krist_bombay@hotmail.com'
@@ -28,5 +29,5 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.add %w( README.md lib/**/*.rb )
 
   rdoc.main  = 'README.md'
-  rdoc.title = 'Well-formedness checker Middleware'
+  rdoc.title = 'Well-formedness checker middleware'
 end
