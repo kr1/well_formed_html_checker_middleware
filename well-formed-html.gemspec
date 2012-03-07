@@ -10,9 +10,13 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Christian Woerner"]
   s.date = %q{2012-03-08}
-  s.description = %q{this rails3 middleware uses nokogiri to parse the body ofthe apps html response and checks if it is well-formed it can be configured to repair errors, but the default behaviour is to print errors and warnings in order to repair the templates that  produce the html response. Therefore it parses the response by default only in development.}
+  s.description = %q{this rails3 middleware uses nokogiri to parse the body of the apps html response and checks if it is well-formed it can be configured to repair errors, but the default behaviour is to print errors and warnings in order to repair the templates that produce the html response. Therefore it parses the response by default only in development.}
   s.email = %q{krist_bombay@hotmail.com}
+  s.extra_rdoc_files = [
+    "README.md"
+  ]
   s.files = [
+    "README.md",
     "Rakefile",
     "VERSION",
     "lib/well_formed_html/log.rb",

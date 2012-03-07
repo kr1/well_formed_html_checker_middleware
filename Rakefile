@@ -9,10 +9,10 @@ begin
   Jeweler::Tasks.new do |gemspec|
     gemspec.name = 'well-formed-html'
     gemspec.summary = 'a rack middleware that informs you on the well-formedness of the responses'
-    gemspec.description = 'this rails3 middleware uses nokogiri to parse the body of' \
+    gemspec.description = 'this rails3 middleware uses nokogiri to parse the body of ' \
                           'the apps html response and checks if it is well-formed ' \
                           'it can be configured to repair errors, but the default behaviour is ' \
-                          'to print errors and warnings in order to repair the templates that  ' \
+                          'to print errors and warnings in order to repair the templates that ' \
                           'produce the html response. Therefore it parses the response by default ' \
                           'only in development.'
     gemspec.authors = ['Christian Woerner']
