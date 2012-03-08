@@ -31,6 +31,7 @@ Deploying
     ```
 
     if you want your html to be repaired, configure the middleware like this:
+
     ```ruby
     if Rails.env.development?
       config.middleware.use WellFormedHtml::Middleware, {
